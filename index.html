@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>counter</title>
+</head>
+<body class="bg-slate-500">
+    <h1 class="text-center text-3xl font-bold mt-8 text-blue-800">Counter</h1>
+    <div class="container text-center">
+        <h2 class="text-3xl  mt-4 result text-bold ">0</h2>
+        <div class="btn text-center">
+            <button class="inc text-3xl font-bold bg-blue-700 px-5 py-1  rounded-lg mt-10  " onclick="inc()">+</button>
+            <button class="dec text-3xl font-bold bg-blue-700 px-5 py-1  rounded-lg mt-10 " onclick="dec()">-</button>
+        </div>
+        <div class="input mt-8">
+            <span>Increment/Decrement by :</span> <input type="number" name="" id="" value="1">
+        </div>
+        <button class="bg-blue-600 mt-8 p-3 rounded-lg reset" onclick="reset()">reset</button>
+    </div>
+
+    <script>
+        const result = document.querySelector('.result');
+        let i =0
+        function inc(){
+            const input = document.querySelector("[type = 'number']").value;
+            i = i+Number(input);
+            result.innerHTML = i
+        }
+        function dec(){
+            const input = document.querySelector("[type = 'number']").value;
+            i = i-Number(input);
+            result.innerHTML = i
+        }
+        function reset(){
+            i=0;
+            const input = document.querySelector("[type = 'number']");
+            input.value = 1
+            result.innerHTML = i;
+        }
+
+    </script>
+</body>
+</html>
